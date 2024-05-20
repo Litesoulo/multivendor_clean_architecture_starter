@@ -4,35 +4,40 @@ As an example, a display of facts about cats and dogs is implemented :)\
 The starter uses an public [Cat-Facts API](https://alexwohlbruck.github.io/cat-facts/docs/) to get facts about animals.
 
 ## Getting Started
-- [Vendor](#vendor)
-  - [Benefits](#benefits)
-  - [Requirements](#requirements)
-  - [Before starting work with vendors](#before-starting-work-with-vendors)
-  - [Add new vendor](#add-new-vendor)
-  - [Switch vendor](#switch-vendor)
-  - [Config registration](#config-registration)
-  - [Why not flavors](#why-not-flavors)
-- [Clean Architecture](#clean-architecture)
-  - [Basis](#basis)
-  - [Examples](#examples)
-- [Project](#project)
-  - [Used patterns](#used-patterns)
-  - [Unrecommended patterns](#unrecommended-patterns)
-  - [Structure](#structure)
-- [Approaches](#approaches)
-  - [Interfaces](#interfaces)
-  - [Models](#models)
-  - [Generation](#generation)
-  - [Components](#components)
-  - [Widget](#widget)
-- [Misconceptions](#misconceptions)
-- [Packages](#packages)
-  - [Recomended packages](#recomended-packages)
-  - [Unrecommended packages](#unrecomended-packages)
-- [CLI](#cli)
-  - [Build runner](#build-runner)
+- [multivendor\_clean\_architecture\_starter](#multivendor_clean_architecture_starter)
+  - [Getting Started](#getting-started)
   - [Vendor](#vendor)
-  - [Build](#build)
+    - [Benefits](#benefits)
+    - [Requirements](#requirements)
+    - [Before starting work with vendors](#before-starting-work-with-vendors)
+    - [Add new vendor](#add-new-vendor)
+    - [Switch vendor](#switch-vendor)
+    - [Config registration](#config-registration)
+    - [Why not flavors](#why-not-flavors)
+  - [Clean Architecture](#clean-architecture)
+    - [Basis](#basis)
+    - [Examples](#examples)
+  - [Project](#project)
+    - [Used patterns](#used-patterns)
+    - [Unrecommended patterns](#unrecommended-patterns)
+    - [Structure](#structure)
+    - [Adaptation](#adaptation)
+  - [Approaches](#approaches)
+      - [Interfaces](#interfaces)
+      - [Models](#models)
+      - [Generation](#generation)
+      - [Components](#components)
+      - [Widget](#widget)
+  - [Misconceptions](#misconceptions)
+      - ["Mandatory mapping between layers"](#mandatory-mapping-between-layers)
+      - ["Mapping only in the interactor"](#mapping-only-in-the-interactor)
+      - ["UseCases is useless"](#usecases-is-useless)
+      - ["Clean Architecture is not needed in small projects"](#clean-architecture-is-not-needed-in-small-projects)
+      - ["Clean Architecture is the correct construction of project directories"](#clean-architecture-is-the-correct-construction-of-project-directories)
+  - [Packages](#packages)
+    - [Recomended packages](#recomended-packages)
+    - [Unrecomended packages](#unrecomended-packages)
+- [My changes:](#my-changes)
 
 ## Vendor
 This project has the ability to completely change the vendor environment.\
@@ -443,3 +448,8 @@ Widget:
 - [flutter_hooks](https://pub.dev/packages/flutter_hooks):\
 Violation of the functional programming paradigm, which in turn talks about the clean of functions, which should be clean, not affect any external variables and states.\
 The build function in widgets should always be clean.
+
+# My changes:
+add 
+import 'package:universal_io/io.dart'; instead of dart:io in initialization_step_list.dart
+because Platform.localeName throws error on web

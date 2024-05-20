@@ -12,7 +12,7 @@ import 'package:mvs_utility/mvs_utility.dart';
 import 'package:flutter/foundation.dart';
 import 'package:mvs_rest/mvs_rest.dart';
 import 'package:flutter/widgets.dart';
-import 'dart:io';
+import 'package:universal_io/io.dart';
 
 import 'package:mvs_widget/mvs_widget.dart';
 
@@ -34,8 +34,7 @@ class InitializationStepList {
       ) {
         WidgetsFlutterBinding.ensureInitialized();
         FlutterError.onError = MVSLogger.logFlutterError;
-        PlatformDispatcher.instance.onError =
-            MVSLogger.logPlatformDispatcherError;
+        PlatformDispatcher.instance.onError = MVSLogger.logPlatformDispatcherError;
         Bloc.observer = const ApplicationBlocObserver();
       },
     ),
@@ -127,6 +126,7 @@ class InitializationStepList {
         InitializationProgress progress,
       ) {
         final Locale platformLocale = Locale(Platform.localeName);
+
         if (ApplicationLocalization.supportedLocales.contains(platformLocale)) {
           progress.locale = platformLocale;
         } else {

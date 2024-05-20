@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "multivendor_clean_architecture_starter",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "multivendor_clean_architecture_starter (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "multivendor_clean_architecture_starter (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "mvs_database",
+            "cwd": "package\\mvs_database",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "mvs_database (profile mode)",
+            "cwd": "package\\mvs_database",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "mvs_database (release mode)",
+            "cwd": "package\\mvs_database",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "mvs_rest",
+            "cwd": "package\\mvs_rest",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "mvs_utility",
+            "cwd": "package\\mvs_utility",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "mvs_utility (profile mode)",
+            "cwd": "package\\mvs_utility",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "mvs_utility (release mode)",
+            "cwd": "package\\mvs_utility",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "mvs_widget",
+            "cwd": "package\\mvs_widget",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "mvs_widget (profile mode)",
+            "cwd": "package\\mvs_widget",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "mvs_widget (release mode)",
+            "cwd": "package\\mvs_widget",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

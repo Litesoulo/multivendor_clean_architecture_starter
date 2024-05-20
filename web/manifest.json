@@ -1,6 +1,6 @@
 {
-    "name": "Cat Fact",
-    "short_name": "Cat Fact",
+    "name": "multivendor_clean_architecture_starter",
+    "short_name": "multivendor_clean_architecture_starter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

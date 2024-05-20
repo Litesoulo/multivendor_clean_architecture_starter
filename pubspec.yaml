@@ -33,6 +33,7 @@ dependencies:
   stack_trace: 1.11.1
   flutter_launcher_icons: 0.13.1
   flutter_native_splash: ^2.4.0
+  universal_io: ^2.2.2
 
 dev_dependencies:
   # Application
@@ -47,9 +48,9 @@ dev_dependencies:
 flutter:
   generate: true
   uses-material-design: true
-  fonts:
-    - family: IconData
-      fonts:
-        - asset: asset/font/IconData.ttf
+  # fonts:
+    # - family: IconData
+      # fonts:
+      #   - asset: asset/font/IconData.ttf
   assets:
     - asset/vec/
