@@ -2,44 +2,44 @@
 .SILENT:
 
 repair:
-	flutter pub cache repair && flutter pub get
-	cd package/mvs_database && flutter pub cache repair && flutter pub get
-	cd package/mvs_rest && flutter pub cache repair && flutter pub get
-	cd package/mvs_utility && flutter pub cache repair && flutter pub get
-	cd package/mvs_widget && flutter pub cache repair && flutter pub get
+	~/tools/flutter/bin/flutter pub cache repair && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_database && ~/tools/flutter/bin/flutter pub cache repair && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_rest && ~/tools/flutter/bin/flutter pub cache repair && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_utility && ~/tools/flutter/bin/flutter pub cache repair && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_widget && ~/tools/flutter/bin/flutter pub cache repair && ~/tools/flutter/bin/flutter pub get
 
 clean:
 	rm -rf ~/Library/Caches/CocoaPods
 	rm -rf ~/Library/Application\ Support/Code/Cache/*
 	rm -rf ~/Library/Application\ Support/Code/CachedData/*
 	rm -rf pubspec.lock
-	flutter clean && flutter pub get
-	cd package/mvs_database && rm -rf pubspec.lock && flutter clean && flutter pub get
-	cd package/mvs_rest && rm -rf pubspec.lock && flutter clean && flutter pub get
-	cd package/mvs_utility && rm -rf pubspec.lock && flutter clean && flutter pub get
-	cd package/mvs_widget && rm -rf pubspec.lock && flutter clean && flutter pub get
+	~/tools/flutter/bin/flutter clean && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_database && rm -rf pubspec.lock && ~/tools/flutter/bin/flutter clean && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_rest && rm -rf pubspec.lock && ~/tools/flutter/bin/flutter clean && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_utility && rm -rf pubspec.lock && ~/tools/flutter/bin/flutter clean && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_widget && rm -rf pubspec.lock && ~/tools/flutter/bin/flutter clean && ~/tools/flutter/bin/flutter pub get
 
 upgrade:
-	flutter pub upgrade && flutter pub get
-	cd package/mvs_database && flutter pub upgrade && flutter pub get
-	cd package/mvs_rest && flutter pub upgrade && flutter pub get
-	cd package/mvs_utility && flutter pub upgrade && flutter pub get
-	cd package/mvs_widget && flutter pub upgrade && flutter pub get
+	~/tools/flutter/bin/flutter pub upgrade && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_database && ~/tools/flutter/bin/flutter pub upgrade && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_rest && ~/tools/flutter/bin/flutter pub upgrade && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_utility && ~/tools/flutter/bin/flutter pub upgrade && ~/tools/flutter/bin/flutter pub get
+	cd package/mvs_widget && ~/tools/flutter/bin/flutter pub upgrade && ~/tools/flutter/bin/flutter pub get
 
 pod-install:
 	cd ios && rm -rf Pods && rm -rf Podfile.lock && rm -rf Flutter/Flutter.podspec
 	cd ios && pod deintegrate && sudo gem uninstall cocoapods && sudo gem uninstall cocoapods-core && sudo gem uninstall cocoapods-downloader && sudo gem install cocoapods
 	cd ios && pod setup && pod install --repo-update && pod cache clean --all && pod update
-	flutter clean && flutter pub get && flutter pub cache repair && flutter pub get
+	~/tools/flutter/bin/flutter clean && ~/tools/flutter/bin/flutter pub get && ~/tools/flutter/bin/flutter pub cache repair && ~/tools/flutter/bin/flutter pub get
 
 build-runner:
-	find . -name \*.g.dart -type f -delete
-	dart run build_runner clean
-	dart run build_runner build --delete-conflicting-outputs
-	cd package/mvs_database && dart run build_runner clean
-	cd package/mvs_database && dart run build_runner build --delete-conflicting-outputs
-	cd package/mvs_rest && dart run build_runner clean
-	cd package/mvs_rest && dart run build_runner build --delete-conflicting-outputs
+	find . -name '\*.g.~/tools/flutter/bin/dart' -type f -delete
+	~/tools/flutter/bin/dart run build_runner clean
+	~/tools/flutter/bin/dart run build_runner build --delete-conflicting-outputs
+	cd package/mvs_database && ~/tools/flutter/bin/dart run build_runner clean
+	cd package/mvs_database && ~/tools/flutter/bin/dart run build_runner build --delete-conflicting-outputs
+	cd package/mvs_rest && ~/tools/flutter/bin/dart run build_runner clean
+	cd package/mvs_rest && ~/tools/flutter/bin/dart run build_runner build --delete-conflicting-outputs
 
 pre-build: clean build-runner
 
