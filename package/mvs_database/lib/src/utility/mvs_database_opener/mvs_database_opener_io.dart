@@ -10,8 +10,7 @@ class MVSDatabaseOpener {
   }) =>
       LazyDatabase(
         () async {
-          final Directory databaseDirectory =
-              await path_provider.getApplicationDocumentsDirectory();
+          final Directory databaseDirectory = await path_provider.getApplicationDocumentsDirectory();
           final File file = File(
             path.join(
               databaseDirectory.path,

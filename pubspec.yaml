@@ -23,6 +23,7 @@ dependencies:
   # Data
   mvs_database:
     path: package/mvs_database
+  sqlite3_flutter_libs: ^0.5.21
   mvs_rest:
     path: package/mvs_rest
   # Utility
