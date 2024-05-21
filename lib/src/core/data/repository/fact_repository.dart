@@ -38,8 +38,7 @@ class FactRepository implements IFactRepository {
 
   @override
   Future<FactBO?> getLastFact() async {
-    final List<MVSFactDatabaseTableData> factsDatabaseData =
-        await this._factDAO.get();
+    final List<MVSFactDatabaseTableData> factsDatabaseData = await this._factDAO.get();
     if (factsDatabaseData.isEmpty) {
       return null;
     }

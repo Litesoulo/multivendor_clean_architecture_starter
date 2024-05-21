@@ -10,12 +10,10 @@ class MVSFactDAO implements IMVSDAO<MVSFactDatabaseTableData> {
   final MVSDatabase database;
 
   @override
-  Future<List<MVSFactDatabaseTableData>> get() =>
-      database.select(database.mVSFactDatabaseTable).get();
+  Future<List<MVSFactDatabaseTableData>> get() => database.select(database.mVSFactDatabaseTable).get();
 
   @override
-  Stream<List<MVSFactDatabaseTableData>> watch() =>
-      database.select(database.mVSFactDatabaseTable).watch();
+  Stream<List<MVSFactDatabaseTableData>> watch() => database.select(database.mVSFactDatabaseTable).watch();
 
   @override
   Future<int> insert({
