@@ -18,6 +18,7 @@ class MVSAppRouter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FPCAppRouter(
+      debugShowCheckedModeBanner: false,
       locale: this.locale,
       localizationsDelegates: this.localizationsDelegates,
       supportedLocales: this.supportedLocales,

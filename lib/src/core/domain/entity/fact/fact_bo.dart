@@ -1,4 +1,3 @@
-//TODO Starter: Entity
 class FactBO {
   const FactBO({
     required this.id,

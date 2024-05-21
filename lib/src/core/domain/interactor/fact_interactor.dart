@@ -10,9 +10,7 @@ abstract class IFactInteractor {
 
   FutureOr<FactBO> getRandom();
 
-  FutureOr<void> save({
-    required FactBO fact,
-  });
+  FutureOr<void> save({required FactBO fact});
 }
 
 class FactInteractor implements IFactInteractor {
@@ -29,10 +27,5 @@ class FactInteractor implements IFactInteractor {
   Future<FactBO> getRandom() async => this.factRepository.getOneRandomFact();
 
   @override
-  Future<void> save({
-    required FactBO fact,
-  }) async =>
-      this.factRepository.insertFact(
-            fact: fact,
-          );
+  Future<void> save({required FactBO fact}) async => this.factRepository.insertFact(fact: fact);
 }

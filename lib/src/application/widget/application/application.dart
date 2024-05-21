@@ -41,8 +41,7 @@ class Application extends StatelessWidget {
           ) =>
               MVSAppRouter(
             locale: this.result.application.locale,
-            localizationsDelegates:
-                ApplicationLocalization.localizationsDelegates,
+            localizationsDelegates: ApplicationLocalization.localizationsDelegates,
             supportedLocales: ApplicationLocalization.supportedLocales,
             routerConfig: this.result.application.router.config(),
           ),
